@@ -1,6 +1,11 @@
-let newDate = ''
+let newDate = '';
 
-window.addEventListener('DOMContentLoaded', () => getInfo());
+$(window).ready(getInfo);
+
+$('#btn').on('click', function() {
+    newDate = date.value;
+    return getInfo();
+});
 
 function getInfo() {
     fetch(`https://api.nasa.gov/planetary/apod?api_key=PVdtYcjSTuenRt1s44hdW25oRDZLfO87FsFdmMq9&date=${newDate}`)
@@ -10,9 +15,5 @@ function getInfo() {
             info.textContent = data.explanation;
             title.textContent = data.title;
     });
-}
+};
 
-$('#btn').on('click', function() {
-    newDate = date.value;
-    return getInfo();
-});
