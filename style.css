@@ -32,9 +32,6 @@ header h1 {
 header p:nth-of-type(1) {
     margin-bottom: 20px;
 }
-header p:nth-of-type(2) {
-    margin-bottom: 10px;
-}
 
 form .container {
     display: flex;
@@ -43,10 +40,20 @@ form .container {
     margin-bottom: 10px;
 }
 
+#error {
+    background-color: #ca2d2d;
+    padding: 3px 8px;
+    padding-bottom: 0px;
+    border-radius: 5px;
+    font-size: 17px;
+    margin-bottom: 5px;
+    visibility: hidden;
+}
+
 form input {
     font-family: 'BIZ UDPGothic', sans-serif;
     padding: 5px;
-    width: 15%;
+    width: 150px;
     border: 2px solid transparent;
     border-radius: 6px;
     background-color: #68686d;
@@ -81,7 +88,7 @@ form button:hover {
     background-color: #7797ff;
 }
 form button:active {
-    background-color: #668aff;
+    background-color: #577eff;
 }
 
 figure .container {
@@ -118,9 +125,6 @@ img {
 }
 
 @media(max-width: 1164px) {
-    form input {
-        min-width: 30%;
-    }
     figure .container {
         width: 95%;
     }
@@ -148,9 +152,6 @@ img {
     }
 }
 @media(max-width: 560px) {
-    form input {
-        min-width: 40%;
-    }
     figure .container {
         padding: 10px;
         border: thin solid #a0a0a0;
@@ -171,9 +172,6 @@ img {
     }
 }
 @media(max-width: 368px) {
-    form input {
-        min-width: 50%;
-    }
     figure h2{
         font-size: 16px;
     }
