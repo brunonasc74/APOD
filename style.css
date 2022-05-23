@@ -122,7 +122,7 @@ img {
         min-width: 30%;
     }
     figure .container {
-        width: 100%;
+        width: 95%;
     }
     .info-container {
         width: 90%;
@@ -147,13 +147,14 @@ img {
         width: 95%;
     }
 }
-@media(max-width: 545px) {
+@media(max-width: 560px) {
     form input {
         min-width: 40%;
     }
     figure .container {
         padding: 10px;
         border: thin solid #a0a0a0;
+        width: 100%
     }
     figure h2{
         font-size: 18px;
