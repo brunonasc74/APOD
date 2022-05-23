@@ -17,9 +17,17 @@ body {
 }
 
 header .container {
-    width: 30%;
+    width: 40%;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+header h1 {
+    margin-bottom: 35px;
+}
+
+header p:nth-of-type(1) {
     margin-bottom: 20px;
 }
 
@@ -91,4 +99,15 @@ img {
     width: 70%;
     margin: auto;
     background-color: #151518;
+    margin-bottom: 10px;
+    line-height: 1.6rem;
+}
+
+@media(max-width: 1164px) {
+    figure .container {
+        width: 100%;
+    }
+    .info-container {
+        width: 90%;
+    }
 }
