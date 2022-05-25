@@ -32,5 +32,6 @@ function getRandomData() {
             info.textContent = data[0].explanation;
             title.textContent = data[0].title;
             date.value = data[0].date;
+            error.style.visibility = 'hidden';
         });
 }
