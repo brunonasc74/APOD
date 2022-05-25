@@ -91,6 +91,12 @@ form button:active {
     background-color: #577eff;
 }
 
+form button:nth-of-type(2) {
+    font-size: 13px;
+    padding: 0px 50px;
+    padding-top: 3px;
+}
+
 figure .container {
     display: flex;
     flex-direction: column;
