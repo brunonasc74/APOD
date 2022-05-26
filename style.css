@@ -62,6 +62,7 @@ form input {
     cursor: pointer;
     transition: 0.25s;
     min-width: 18%;
+    text-align: center;
 }
 form input:hover {
     border: 2px solid #929297;
@@ -122,6 +123,14 @@ img {
     cursor: pointer;
 }
 
+iframe {
+    margin-top: 20px;
+    width: 790px;
+    height: 527px;
+    border: none;
+    display: none;
+}
+
 .info-container {
     width: 70%;
     margin: auto;
@@ -153,6 +162,10 @@ img {
         max-height: 500px;
         margin-bottom: 0;
     }
+    iframe {
+        width: 500px;
+        height: 333px;
+    }
     .info-container {
         width: 95%;
     }
@@ -170,11 +183,19 @@ img {
         max-width: 400px;
         max-height: 400px;
     }
+    iframe {
+        width: 400px;
+        height: 267px;
+    }
 }
 @media(max-width: 420px) {
     img {
         max-width: 350px;
         max-height: 350px;
+    }
+    iframe {
+        width: 350px;
+        height: 233px;
     }
 }
 @media(max-width: 368px) {
@@ -184,5 +205,9 @@ img {
     img {
         max-width: 300px;
         max-height: 300px;
+    }
+    iframe {
+        width: 300px;
+        height: 200px;
     }
 }
