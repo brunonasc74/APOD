@@ -20,7 +20,7 @@ function getData() {
                     } else {
                         $('#video').attr('src', data.url).show();
                         $('#img').hide();
-                    }
+                    };
                     $('#info').text(data.explanation);
                     $('#title').text(data.title);
                     $('#date').val(data.date);
@@ -31,7 +31,7 @@ function getData() {
 };
 
 function getRandomData() {
-    fetch(`https://api.nasa.gov/planetary/apod?api_key=PVdtYcjSTuenRt1s44hdW25oRDZLfO87FsFdmMq9&count=1`)
+    fetch('https://api.nasa.gov/planetary/apod?api_key=PVdtYcjSTuenRt1s44hdW25oRDZLfO87FsFdmMq9&count=1')
         .then(res => res.json())
         .then(data => {
             if(data[0].media_type !== 'video') {
@@ -40,10 +40,10 @@ function getRandomData() {
             } else {
                 $('#video').attr('src', data[0].url).show();
                 $('#img').hide();
-            }
+            };
             $('#info').text(data[0].explanation);
             $('#title').text(data[0].title);
             $('#date').val(data[0].date);
             error.style.visibility = 'hidden';
         });
-}
+};
