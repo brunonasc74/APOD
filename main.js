@@ -15,17 +15,15 @@ function getData() {
             if(res.ok) {
                 res.json().then(data => {
                     if(data.media_type !== 'video') {
-                        img.src = data.hdurl ?? data.url;
-                        img.style.display = 'block'
-                        video.style.display = 'none'
+                        $('#img').attr('src', data.hdurl ?? data.url).show();
+                        $('#video').hide();
                     } else {
-                        video.src = data.url;
-                        img.style.display = 'none'
-                        video.style.display = 'block'
+                        $('#video').attr('src', data.url).show();
+                        $('#img').hide();
                     }
-                    info.textContent = data.explanation;
-                    title.textContent = data.title;
-                    date.value = data.date;
+                    $('#info').text(data.explanation);
+                    $('#title').text(data.title);
+                    $('#date').val(data.date);
                     error.style.visibility = 'hidden';
                 });
             } else (error.style.visibility = 'visible');
@@ -37,17 +35,15 @@ function getRandomData() {
         .then(res => res.json())
         .then(data => {
             if(data[0].media_type !== 'video') {
-                img.src = data[0].hdurl ?? data[0].url;
-                img.style.display = 'block'
-                video.style.display = 'none'
+                $('#img').attr('src', data[0].hdurl ?? data[0].url).show();
+                $('#video').hide();
             } else {
-                video.src = data[0].url;
-                img.style.display = 'none'
-                video.style.display = 'block'
+                $('#video').attr('src', data[0].url).show();
+                $('#img').hide();
             }
-            info.textContent = data[0].explanation;
-            title.textContent = data[0].title;
-            date.value = data[0].date;
+            $('#info').text(data[0].explanation);
+            $('#title').text(data[0].title);
+            $('#date').val(data[0].date);
             error.style.visibility = 'hidden';
         });
 }
