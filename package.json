@@ -1,0 +1,22 @@
+{
+  "name": "apod",
+  "version": "1.0.0",
+  "description": "apod",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunonasc74/APOD.git"
+  },
+  "author": "brunonasc74",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brunonasc74/APOD/issues"
+  },
+  "homepage": "https://github.com/brunonasc74/APOD#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.49.1",
+    "checkly": "latest",
+    "ts-node": "latest",
+    "typescript": "^5.7.2"
+  }
+}
